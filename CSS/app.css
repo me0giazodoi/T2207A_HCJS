@@ -1,0 +1,16 @@
+h1{
+    color:orangered;
+}
+p{
+    color:green;/* màu chữ */
+    font-size: 16px;/* cỡ chữ */
+    font-family: sans-serif;/* phông chữ */
+    font-weight: bold;/* độ dày của chữ */
+    line-height: 24px;/* khoảng cách giữa các dòng */
+    text-decoration: none;/* underline line-through overline ->gạch chân, gạch chữ, gạch đầu */
+    text-align: justify;/* left right center justify */
+    text-transform: capitalize;/* uppercase->chữ in hoa lowercase-> chữ in thường capitalize->viết hoa chữ dầu tiên */
+    font-style: italic;/*chữ in nghiêng */
+    background-color: deepskyblue;/* màu nền*/
+    width: 500px /* Độ rộng của ô chữ */
+}
