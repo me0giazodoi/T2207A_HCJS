@@ -1,0 +1,41 @@
+.box-1{
+    width: 500px;
+    line-height: 10px;
+}
+.box-2{
+    float: right;
+}
+#content{
+    width: 600px;
+    margin: 0px auto;
+}
+.box-12{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.core-competencies h3{
+    text-transform: uppercase;
+    border-bottom: 1px solid gray;
+}
+.core-competencies{
+    text-align: justify;
+}
+.work-experience h3{
+    text-transform: uppercase;
+    border-bottom: 1px solid gray;
+}
+.abc{
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+.xyz{
+    line-height: 1px;
+}
+.Philippines{
+    text-decoration: underline;
+}
+.ahihi{
+    width: calc(600px - 5%);
+    float: right;
+}
