@@ -1,0 +1,65 @@
+div{
+    width: calc(25% - 30px);
+    /*height: 300px;*/
+    float: left;
+    border: 1px solid red; /* solid, dotted, dashed */
+    /*
+    border-left:
+    border-right:
+    border-top:
+    border-bottom:
+     */
+    margin: 10px 15px ; /*top right bottom left*/
+    /*
+    margin-top
+    margin-bottom
+    margin-right
+    margin-left
+    */
+    padding: 30px 25px ;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 5px red;
+    border-radius: 6px;
+    transition: all 300ms;
+}
+div:hover{
+    /*transform: rotate(15deg);*/
+    transform: scale(1.15);
+}
+img{
+    max-width: 100%;
+}
+#box-3{
+    background-color: hotpink;
+}
+.box-124{
+    background-color: deepskyblue;
+}
+.box-special{
+    color: green;
+    background-color: orange;
+}
+
+
+/* danh sách ưu tiên*/
+#pid{
+    color: dodgerblue;
+}
+.dp .pc{
+    color: coral;
+}
+div .pc{
+    color: aquamarine;
+}
+.pc{
+    color: red;
+}
+body div p{
+    color: brown;
+}
+div p{
+    color: blueviolet;
+}
+p{
+    color: #222222;
+}

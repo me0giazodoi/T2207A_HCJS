@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo From</title>
+  <link rel="stylesheet" href="CSS/Form.css">
+</head>
+<body>
+<form method="get" action="link">
+  <label>Full name</label>
+  <input type="text" required name="fullname" placeholder="Enter name..."/>
+  <label>Email</label>
+  <input type="email" required name="youremail" placeholder="Enter email..."/>
+  <label>Password</label>
+  <input type="password" required name="pwd" placeholder="Enter password..."/>
+  <label>Age</label>
+  <input type="number" name="age" placeholder="Enter age..."/>
+  <label>Birthday</label>
+  <input type="date" name="brth" placeholder="Enter birthday..."/>
+  <label>Week</label>
+  <input type="week" name="brth" placeholder="Enter birthday..."/>
+  <label>Gender</label>
+  <label><input type="radio" value="male" name="gender"/>Nam</label>
+  <label><input type="radio" value="female" name="gender"/>Nữ</label>
+  <label><input type="radio" value="other" name="gender"/>Khác</label>
+  <label>My CV</label>
+  <input type="file" name="cv" placeholder="Nộp CV..."/>
+  <label>City</label>
+  <select name="yourcity">
+    <option value="hanoi">Hà Nội</option>
+    <option value="saigon">TP HCM</option>
+    <option value="cantho">Cần Thơ</option>
+  </select>
+  <label>Tiểu sử bản thân</label>
+  <textarea name="motabanthan" rows="10" cols="100"></textarea>
+  <label><input type="checkbox" name="confirm"/>Tôi đã đọc và đồng ý các điều khoản trong hợp đồng</label>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+  <button type="button">Button</button>
+</form>
+
+</body>
+</html>
