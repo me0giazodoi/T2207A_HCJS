@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buoi 20</title>
+    <link rel="stylesheet" href="CSS/Buoi20.css">
+</head>
+<body>
+    <div id="menu">
+
+    </div>
+    <script type="text/javascript">
+        function getMenu() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                var data = JSON.parse(this.responseText);
+                var ls = data.data;
+                for (var i=0;i<ls.length;i++){
+                    var li_html=`<div class="food-box">
+                        <img width="100%" src="${ls[i].image}"/>
+                        <h3 class="food-name">${ls[i].name}</h3>
+                        <p class="food-desc">${ls[i].description}</p>
+                        <p class="food-price">${ls[i].price}</p>
+                    </div>`;
+                    var menu=document.getElementById("menu");
+                    menu.innerHTML+=li_html;
+                }
+            }
+            var url = "https://foodgroup.herokuapp.com/api/today-special"
+            xhttp.open("GET",url,true);
+            xhttp.send();
+        }
+        getMenu()
+    </script>
+</body>
+</html>

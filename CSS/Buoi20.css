@@ -1,0 +1,13 @@
+#menu{
+    display: flex;
+}
+.food-box{
+    width: 18%;
+}
+.food-name{
+    text-align: center;
+    min-height: 50px;
+}
+.food-price{
+    text-align: center;
+}
