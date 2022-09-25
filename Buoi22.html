@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buoi 22</title>
+    <link rel="stylesheet" href="libs/bootstrap5.2.1/css/bootstrap.css"/>
+    <link rel="stylesheet" href="CSS/Layout.css"/>
+
+</head>
+<body>
+    <section class="section">
+        <div id="weather-container" class="container">
+        </div>
+    </section>
+    <script type="text/javascript">
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            var data = JSON.parse(this.responseText);
+            var ls = data.list;
+            var no_rows = ls.length/4;
+            var index = 0;
+            for (var j=1; j<=no_rows;j++) {
+                var rows = document.getElementById("weather-container");
+                var rows_html = '<div class="row" id="row-' + j + '">';
+                for (var t=0;t<4;t++) {
+                    var cols_html = `
+                    <div class="col-3 card">
+                        <p class="date-time">${ls[index].dt_txt}</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="temp">${ls[index].main.temp}</h2>
+                                <p class="desc">${ls[index].weather[0].description}</p>
+                            </div>
+                            <div class="col-6">
+                                <img class="image" src="https://openweathermap.org/img/wn/${ls[index].weather[0].icon}@2x.png">
+                            </div>
+                        </div>
+                    </div>`;
+                    rows_html += cols_html;
+                    index ++;
+                }
+                rows_html += '</div>';
+                rows.innerHTML += rows_html;
+            }
+        }
+        var url = "https://api.openweathermap.org/data/2.5/forecast?q=Hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric"
+        xhttp.open("GET",url,true);
+        xhttp.send();
+    </script>
+</body>
+</html>
